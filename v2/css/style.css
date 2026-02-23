@@ -55,6 +55,7 @@ body {
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  /* overflow: hidden; */
 }
 
 img {
@@ -456,6 +457,12 @@ ol {
   object-position: top center;
 }
 
+@media (max-width: 768px) {
+  .hero__photo {
+    height: 40vh;
+  }
+}
+
 /* ═══════════════════════════════════
    STATS (V2 layout + V1 colors)
    ═══════════════════════════════════ */
@@ -645,6 +652,7 @@ ol {
   position: relative;
   padding: 96px 0;
   background: var(--white);
+  overflow: hidden;
 }
 
 .testimonials__top-line {
