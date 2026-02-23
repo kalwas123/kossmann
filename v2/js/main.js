@@ -129,7 +129,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const nextBtn = document.querySelector(".testimonials__btn--next");
 
   if (track && slides.length) {
-    let current = 0;
+    let current = 1;
     const total = slides.length;
 
     slides.forEach((_, i) => {
@@ -179,14 +179,14 @@ document.addEventListener("DOMContentLoaded", () => {
       { passive: true },
     );
 
-    let autoplayTimer = setInterval(() => goTo(current + 1), 6000);
+    // let autoplayTimer = setInterval(() => goTo(current + 1), 6000);
 
-    const sliderEl = document.querySelector(".testimonials__slider");
-    sliderEl.addEventListener("mouseenter", () => clearInterval(autoplayTimer));
-    sliderEl.addEventListener(
-      "mouseleave",
-      () => (autoplayTimer = setInterval(() => goTo(current + 1), 6000)),
-    );
+    // const sliderEl = document.querySelector(".testimonials__slider");
+    // sliderEl.addEventListener("mouseenter", () => clearInterval(autoplayTimer));
+    // sliderEl.addEventListener(
+    //   "mouseleave",
+    //   () => (autoplayTimer = setInterval(() => goTo(current + 1), 6000)),
+    // );
   }
 
   /* ─── GDPR toggle ─── */
