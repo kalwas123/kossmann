@@ -18,8 +18,8 @@
   --color-sand: #f5f5f5;
   --color-text: rgba(0, 0, 0, 0.9);
 
-  --font-heading: 'Bebas Neue', sans-serif;
-  --font-body: 'Inter', sans-serif;
+  --font-heading: "Bebas Neue", sans-serif;
+  --font-body: "Inter", sans-serif;
 
   --max-width: 1400px;
   --container-padding: 16px;
@@ -118,8 +118,7 @@ a {
 
 .navbar__link--cta {
   color: var(--color-white);
-  background: var(--color-black);
-  border: 1px dashed var(--color-crimson);
+  background: var(--color-crimson);
 }
 
 .navbar__link--cta:hover {
@@ -223,7 +222,7 @@ a {
 
 /* Dashed-line mixin via pseudo-elements */
 .dashed-h::before {
-  content: '';
+  content: "";
   position: absolute;
   left: 0;
   right: 0;
@@ -233,7 +232,7 @@ a {
 }
 
 .dashed-v::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   bottom: 0;
@@ -339,7 +338,7 @@ a {
 }
 
 .hero__title {
-  font-family:  
+  font-family: var(--font-heading);
   font-size: clamp(48px, 7vw, 96px);
   font-weight: 400;
   letter-spacing: 2.4px;
@@ -636,7 +635,8 @@ a {
   background: var(--color-white);
   border-radius: 8px;
   padding: 32px;
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -4px rgba(0, 0, 0, 0.1);
 }
 
 .process-card__connector {
@@ -733,7 +733,8 @@ a {
   background: var(--color-white);
   border-radius: 8px;
   padding: 34px;
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -4px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
   gap: 24px;
@@ -785,7 +786,7 @@ a {
 }
 
 .achievements__list li::before {
-  content: '';
+  content: "";
   position: absolute;
   left: 0;
   top: 8px;
@@ -919,7 +920,8 @@ a {
   font-weight: 500;
   line-height: 28px;
   cursor: pointer;
-  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 8px 10px -6px rgba(0, 0, 0, 0.1);
   transition: background 0.3s ease, transform 0.2s ease;
 }
 
