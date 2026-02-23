@@ -569,6 +569,16 @@ ol {
   margin-left: 0;
 }
 
+@media (max-width: 768px) {
+  .about__container .section-heading {
+    text-align: center;
+  }
+  .about .section-separator {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
 .about__paragraphs {
   display: flex;
   flex-direction: column;
@@ -1405,10 +1415,18 @@ ol {
   }
 
   .stats__inner {
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
     gap: 28px;
     padding: 36px 24px;
     margin: 0 var(--gutter);
+  }
+
+  .stats__item {
+    padding: 0;
+    text-align: center;
+    flex: 1;
   }
 
   .stats__divider {
@@ -1417,6 +1435,7 @@ ol {
     border-left: none;
     border-top: 2px dashed var(--crimson);
     opacity: 0.3;
+    display: none;
   }
 
   .stats__number {
