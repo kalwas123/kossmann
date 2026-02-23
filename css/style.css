@@ -33,7 +33,6 @@ body {
   font-family: var(--font-body);
   color: var(--color-text);
   line-height: 1.6;
-  padding-top: 64px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -302,8 +301,10 @@ a {
 
 .hero__image {
   width: 100%;
-  height: auto;
+  height: 60vh;
   display: block;
+  object-fit: cover;
+  object-position: top center;
 }
 
 /* Decorative corner squares (SVG) */
