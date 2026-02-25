@@ -3,7 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Iwona Kossmann — Twój Mentor</title>
+    <title>Iwona Kossmann — Mentor Biznesowy</title>
+    <meta
+      name="description"
+      content="Iwona Kossmann — mentor biznesowy z 15-letnim doświadczeniem. Pomogę Ci odkryć Twój potencjał i osiągnąć cele zawodowe."
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -14,99 +18,52 @@
   </head>
   <body>
     <!-- NAVBAR -->
-    <nav class="navbar" id="navbar">
-      <div class="navbar__inner">
-        <a href="#hero" class="navbar__logo">Iwona Kossmann</a>
-        <button class="navbar__toggle" aria-label="Menu" aria-expanded="false">
+    <nav class="nav" id="nav">
+      <div class="nav__inner">
+        <a href="#hero" class="nav__logo">Iwona Kossmann</a>
+        <button class="nav__toggle" aria-label="Menu" aria-expanded="false">
           <span></span>
           <span></span>
           <span></span>
         </button>
-        <ul class="navbar__menu">
-          <li><a href="#about" class="navbar__link">O Mnie</a></li>
-          <li><a href="#testimonials" class="navbar__link">Opinie</a></li>
-          <li><a href="#process" class="navbar__link">Proces</a></li>
-          <li><a href="#achievements" class="navbar__link">Osiągnięcia</a></li>
+        <ul class="nav__menu">
+          <li><a href="#about" class="nav__link">O mnie</a></li>
+          <li><a href="#testimonials" class="nav__link">Opinie</a></li>
+          <li><a href="#process" class="nav__link">Proces</a></li>
+          <li><a href="#achievements" class="nav__link">Doświadczenie</a></li>
           <li>
-            <a href="#contact" class="navbar__link navbar__link--cta"
-              >Kontakt</a
-            >
+            <a href="#contact" class="nav__link nav__link--cta">Kontakt</a>
           </li>
         </ul>
       </div>
     </nav>
 
-    <!-- HERO SECTION -->
+    <!-- HERO -->
     <section class="hero" id="hero">
-      <div class="hero__line hero__line--top"></div>
-      <div class="hero__line hero__line--bottom"></div>
+      <div class="hero__deco-line hero__deco-line--top"></div>
+      <div class="hero__deco-line hero__deco-line--bottom"></div>
 
-      <div class="container">
-        <div class="hero__grid">
-          <div class="hero__image-wrapper">
-            <svg
-              class="hero__image-decoration hero__image-decoration--top-left"
-              width="80"
-              height="80"
-              viewBox="0 0 80 80"
-              fill="none"
+      <div class="hero__container">
+        <div class="hero__content" data-animate="fade-up">
+          <h1 class="hero__title">Twój Mentor</h1>
+          <div class="hero__separator"></div>
+          <p class="hero__subtitle">
+            Od 15 lat pomagam liderom i przedsiębiorcom osiągać cele zawodowe,
+            przechodzić przez transformację i budować karierę dającą poczucie
+            spełnienia.
+          </p>
+          <div class="hero__actions">
+            <a
+              href="https://forms.gle/CohtAwxWMPLHkk4v5"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn btn--primary"
             >
-              <rect
-                class="hero__decoration-path"
-                x="1"
-                y="1"
-                width="78"
-                height="78"
-                stroke="#ec1313"
-                stroke-width="2"
-                stroke-dasharray="8 6"
-                opacity="0.6"
-              />
-            </svg>
-            <svg
-              class="hero__image-decoration hero__image-decoration--bottom-right"
-              width="128"
-              height="128"
-              viewBox="0 0 128 128"
-              fill="none"
-            >
-              <rect
-                class="hero__decoration-path"
-                x="1"
-                y="1"
-                width="126"
-                height="126"
-                stroke="#ec1313"
-                stroke-width="2"
-                stroke-dasharray="8 6"
-                opacity="0.6"
-              />
-            </svg>
-            <div class="hero__image-card">
-              <img
-                src="img/mentor.jpg"
-                alt="Iwona Kossmann — Mentor biznesowy"
-                class="hero__image"
-              />
-            </div>
-          </div>
-
-          <div class="hero__content">
-            <h1 class="hero__title">Twój Mentor</h1>
-            <div class="hero__separator"></div>
-            <p class="hero__description">
-              Pomagę Ci odkryć Twój potencjał i osiągnąć zamierzone w życiu
-              zawodowym cele
-            </p>
-            <a href="#about" class="hero__cta">
-              <span>Poznaj Moją Historię</span>
-              <svg
-                width="16"
-                height="16"
-                viewBox="0 0 16 16"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
+              Zarezerwuj rozmowę
+            </a>
+            <a href="#about" class="btn btn--ghost">
+              <span>Poznaj moją historię</span>
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
                 <path
                   d="M8 3L8 13"
                   stroke="currentColor"
@@ -125,62 +82,168 @@
             </a>
           </div>
         </div>
+        <div class="hero__image-col" data-animate="fade-left">
+          <svg
+            class="hero__corner hero__corner--tl"
+            width="80"
+            height="80"
+            viewBox="0 0 80 80"
+            fill="none"
+          >
+            <rect
+              x="1"
+              y="1"
+              width="78"
+              height="78"
+              stroke="#ec1313"
+              stroke-width="2"
+              stroke-dasharray="8 6"
+              opacity="0.6"
+            />
+          </svg>
+          <svg
+            class="hero__corner hero__corner--br"
+            width="128"
+            height="128"
+            viewBox="0 0 128 128"
+            fill="none"
+          >
+            <rect
+              x="1"
+              y="1"
+              width="126"
+              height="126"
+              stroke="#ec1313"
+              stroke-width="2"
+              stroke-dasharray="8 6"
+              opacity="0.6"
+            />
+          </svg>
+          <div class="hero__image-frame">
+            <img
+              src="/img/v1.jpg"
+              alt="Iwona Kossmann — Mentor biznesowy"
+              class="hero__photo"
+              loading="eager"
+            />
+          </div>
+        </div>
       </div>
     </section>
 
-    <!-- O MNIE SECTION -->
+    <!-- STATS BAR -->
+    <section class="stats" data-animate="fade-up">
+      <div class="stats__inner">
+        <div class="stats__item">
+          <span class="stats__number" data-count="15">0</span>
+          <span class="stats__suffix">+</span>
+          <p class="stats__label">Lat doświadczenia<br />w mentoringu</p>
+        </div>
+        <div class="stats__divider"></div>
+        <div class="stats__item">
+          <span class="stats__number" data-count="30">0</span>
+          <span class="stats__suffix">+</span>
+          <p class="stats__label">Lat doświadczenia<br />w biznesie</p>
+        </div>
+        <div class="stats__divider"></div>
+        <div class="stats__item">
+          <span class="stats__number" data-count="20">0</span>
+          <span class="stats__suffix">+</span>
+          <p class="stats__label">
+            Lat doświadczeni<br />
+            w zarządach (COO, CEO)
+          </p>
+        </div>
+        <div class="stats__divider"></div>
+        <div class="stats__item">
+          <span class="stats__number" data-count="15">0</span>
+          <span class="stats__suffix"></span>
+          <p class="stats__label">Nagród<br />branżowych</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
     <section class="about" id="about">
       <div class="about__vline about__vline--left"></div>
       <div class="about__vline about__vline--right"></div>
 
-      <div class="about__inner">
-        <h2 class="about__title">O Mnie</h2>
-        <div class="about__separator"></div>
-
-        <div class="about__text">
-          <p>
-            Jestem mentorką biznesową od 15 lat, pomagam ludziom w odkrywaniu
-            ich pełnego potencjału i osiąganiu pozytywnych wyników w życiu
-            zawodowym.
-          </p>
-          <p>
-            Posiadam doświadczenie w przeprowadzeniu przez zmianę menedżerów z
-            korporacji oraz pracowników średnich i małych firm. Pomagam w
-            przechodzeniu przez transformację w organizacjach i budowaniu
-            kariery, która daje poczucie spełnienia.
-          </p>
-          <p>
-            Organizacje, w których zdobyłam doświadczenia mentorki to Fundacja
-            Liderek Biznesu oraz Sieć Przedsiębiorczych Kobiet.
-          </p>
+      <div class="about__container">
+        <div class="about__text" data-animate="fade-up">
+          <h2 class="section-heading">O Mnie</h2>
+          <div class="section-separator"></div>
+          <div class="about__paragraphs">
+            <p>
+              Jestem mentorką biznesową z 15-letnim doświadczeniem. Pomagam
+              ludziom w odkrywaniu ich pełnego potencjału i osiąganiu
+              pozytywnych wyników w życiu zawodowym.
+            </p>
+            <p>
+              Posiadam doświadczenie w przeprowadzeniu przez zmianę menedżerów z
+              korporacji oraz pracowników średnich i małych firm. Pomagam w
+              przechodzeniu przez transformację w organizacjach i budowaniu
+              kariery, która daje poczucie spełnienia.
+            </p>
+            <p>
+              Organizacje, w których zdobyłam doświadczenia mentorki to
+              <strong>Fundacja Liderek Biznesu</strong> oraz
+              <strong>Sieć Przedsiębiorczych Kobiet</strong>.
+            </p>
+          </div>
+          <a href="#contact" class="btn btn--outline">Porozmawiajmy</a>
         </div>
-
-        <div class="about__bottom-ornament">
-          <span class="about__dash"></span>
-          <span class="about__dot"></span>
-          <span class="about__dash"></span>
+        <div class="about__visual" data-animate="fade-left">
+          <div class="about__quote-card">
+            <svg
+              class="about__quote-icon"
+              width="48"
+              height="48"
+              viewBox="0 0 24 24"
+              fill="none"
+            >
+              <path
+                d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z"
+                fill="currentColor"
+              />
+              <path
+                d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"
+                fill="currentColor"
+              />
+            </svg>
+            <blockquote class="about__quote-text">
+              Pomagam odkryć potencjał i przekształcić go w realne wyniki. Każda
+              sesja to krok bliżej do celu.
+            </blockquote>
+            <div class="ornament">
+              <span class="ornament__dash"></span>
+              <span class="ornament__dot"></span>
+              <span class="ornament__dash"></span>
+            </div>
+            <p class="about__quote-author">— Iwona Kossmann</p>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- TESTIMONIALS SECTION -->
+    <!-- TESTIMONIALS -->
     <section class="testimonials" id="testimonials">
       <div class="testimonials__top-line"></div>
 
-      <div class="container">
-        <div class="testimonials__inner">
-          <h2 class="section-title">Opinie Mentee</h2>
+      <div class="testimonials__container">
+        <div class="testimonials__header" data-animate="fade-up">
+          <h2 class="section-heading">Opinie Mentee</h2>
           <div class="section-separator"></div>
+        </div>
 
-          <div class="testimonials__grid">
-            <div class="testimonial-card">
+        <div class="testimonials__grid" data-animate="fade-up">
+          <article class="testimonial">
+            <div class="testimonial__content">
               <svg
-                class="testimonial-card__quote"
+                class="testimonial__quote-icon"
                 width="32"
                 height="32"
                 viewBox="0 0 24 24"
                 fill="none"
-                xmlns="http://www.w3.org/2000/svg"
               >
                 <path
                   d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z"
@@ -191,40 +254,36 @@
                   fill="currentColor"
                 />
               </svg>
-
-              <div class="testimonial-card__body">
-                <p>
-                  Współpraca mentoringowa z Iwoną była dla mnie naprawdę bardzo
-                  wartościowym doświadczeniem. Z ogromnym zaangażowaniem i
-                  spokojną uważnością prowadziła mnie przez cały proces,
-                  pomagając porządkować myśli i decyzje. Jej podejście było
-                  jednocześnie mądre i praktyczne, bez narzucania gotowych
-                  rozwiązań. Dzięki temu czułam realne wsparcie i przestrzeń do
-                  własnego rozwoju.
-                </p>
-                <p>
-                  Iwona była autentycznie zaangażowaną w moje działania, nie
-                  tylko jako mentorka, ale jako ktoś, kto naprawdę kibicuje.
-                  Potrafiła w odpowiednim momencie dodać odwagi i energii, dając
-                  mi realny „wiatr w żagle", kiedy najbardziej go potrzebowałam.
-                  Dzięki temu łatwiej było ruszyć z miejsca i iść dalej z
-                  większą pewnością.
-                </p>
-              </div>
-
-              <div class="testimonial-card__footer">
-                <span class="testimonial-card__author">Karolina M.</span>
-              </div>
+              <p>
+                Współpraca mentoringowa z Iwoną była dla mnie naprawdę bardzo
+                wartościowym doświadczeniem. Z ogromnym zaangażowaniem i
+                spokojną uważnością prowadziła mnie przez cały proces, pomagając
+                porządkować myśli i decyzje. Jej podejście było jednocześnie
+                mądre i praktyczne, bez narzucania gotowych rozwiązań.
+              </p>
+              <p>
+                Iwona była autentycznie zaangażowaną w moje działania. Potrafiła
+                w odpowiednim momencie dodać odwagi i energii, dając mi realny
+                „wiatr w żagle", kiedy najbardziej go potrzebowałam.
+              </p>
             </div>
+            <footer class="testimonial__footer">
+              <div class="testimonial__avatar">KM</div>
+              <div>
+                <p class="testimonial__name">Karolina M.</p>
+                <p class="testimonial__role">Mentee</p>
+              </div>
+            </footer>
+          </article>
 
-            <div class="testimonial-card">
+          <article class="testimonial">
+            <div class="testimonial__content">
               <svg
-                class="testimonial-card__quote"
+                class="testimonial__quote-icon"
                 width="32"
                 height="32"
                 viewBox="0 0 24 24"
                 fill="none"
-                xmlns="http://www.w3.org/2000/svg"
               >
                 <path
                   d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z"
@@ -235,36 +294,36 @@
                   fill="currentColor"
                 />
               </svg>
-
-              <div class="testimonial-card__body">
-                <p>
-                  Iwona od początku prezentowała otwartą postawę, która
-                  niwelowała dystans wynikający z jej wysokiej pozycji
-                  (zasiadała w zarządach dużych korporacji), co bardzo ułatwiło
-                  mi otwarcie się. Jasno komunikowała swoje wartości biznesowe,
-                  opierając się na przykładach ze swojej marki modowej, co było
-                  dla mnie drogowskazem etycznym. Mimo różnic w naszym ówczesnym
-                  statusie zawodowym (ona właścicielka, ja kontraktowy
-                  współpracownik jednej firmy), potrafiła zarządzić tą
-                  różnorodnością, traktując moje obawy z pełną uwagą. Jej
-                  działania były spójne z tym, co deklarowała jako swoje
-                  przekonania na temat przedsiębiorczości.
-                </p>
-              </div>
-
-              <div class="testimonial-card__footer">
-                <span class="testimonial-card__author">Elżbieta K.</span>
-              </div>
+              <p>
+                Iwona od początku prezentowała otwartą postawę, która niwelowała
+                dystans wynikający z jej wysokiej pozycji. Jasno komunikowała
+                swoje wartości biznesowe, opierając się na przykładach ze swojej
+                marki modowej, co było dla mnie drogowskazem etycznym.
+              </p>
+              <p>
+                Mimo różnic w naszym statusie zawodowym, potrafiła zarządzić tą
+                różnorodnością, traktując moje obawy z pełną uwagą. Jej
+                działania były spójne z tym, co deklarowała jako swoje
+                przekonania na temat przedsiębiorczości.
+              </p>
             </div>
+            <footer class="testimonial__footer">
+              <div class="testimonial__avatar">EK</div>
+              <div>
+                <p class="testimonial__name">Elżbieta K.</p>
+                <p class="testimonial__role">Mentee</p>
+              </div>
+            </footer>
+          </article>
 
-            <div class="testimonial-card">
+          <article class="testimonial">
+            <div class="testimonial__content">
               <svg
-                class="testimonial-card__quote"
+                class="testimonial__quote-icon"
                 width="32"
                 height="32"
                 viewBox="0 0 24 24"
                 fill="none"
-                xmlns="http://www.w3.org/2000/svg"
               >
                 <path
                   d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z"
@@ -275,247 +334,105 @@
                   fill="currentColor"
                 />
               </svg>
-
-              <div class="testimonial-card__body">
-                <p>
-                  W trakcie mojego udziału w Akceleratorze Klubu
-                  Przedsiębiorczych Kobiet w 2017 r. miałam przyjemność być
-                  mentee Iwony Kossmann. Było to na krótko przed inauguracją
-                  mojego projektu i wypuszczeniem na rynek pierwszej kolekcji
-                  marki LOVE ON THE SNOW. Podczas naszych spotkań roboczych,
-                  Iwona zrecenzowała moje plany, weryfikując je m.in. pod kątem
-                  rentowności biznesu. Cieszę się, że mogłam skorzystać z jej
-                  doświadczenia w branży odzieżowej, wprowadzając modyfikacje,
-                  które pozwoliły mi uniknąć błędów na starcie. Nasze sesje
-                  mentoringowe pomogły mi poznać i zrozumieć wiele aspektów
-                  pracy nad marką odzieżową, niezbędnych do prowadzania biznesu
-                  modowego. A także nabrać większej pewności siebie i wiary, że
-                  mój pomysł ma szanse na sukces. Polecam serdecznie!
-                </p>
-              </div>
-
-              <div class="testimonial-card__footer">
-                <span class="testimonial-card__author">Joanna K.</span>
-              </div>
+              <p>
+                W trakcie mojego udziału w Akceleratorze Klubu Przedsiębiorczych
+                Kobiet miałam przyjemność być mentee Iwony. Podczas naszych
+                spotkań roboczych, Iwona zrecenzowała moje plany, weryfikując je
+                m.in. pod kątem rentowności biznesu.
+              </p>
+              <p>
+                Nasze sesje mentoringowe pomogły mi poznać i zrozumieć wiele
+                aspektów pracy nad marką odzieżową, niezbędnych do prowadzania
+                biznesu modowego. A także nabrać większej pewności siebie i
+                wiary, że mój pomysł ma szanse na sukces.
+              </p>
             </div>
-          </div>
+            <footer class="testimonial__footer">
+              <div class="testimonial__avatar">JK</div>
+              <div>
+                <p class="testimonial__name">Joanna K.</p>
+                <p class="testimonial__role">Mentee — LOVE ON THE SNOW</p>
+              </div>
+            </footer>
+          </article>
+        </div>
 
-          <div class="section-ornament">
-            <span class="section-ornament__dash"></span>
-            <span class="section-ornament__dot"></span>
-            <span class="section-ornament__dash"></span>
-          </div>
+        <div class="ornament ornament--section">
+          <span class="ornament__dash"></span>
+          <span class="ornament__dot"></span>
+          <span class="ornament__dash"></span>
         </div>
       </div>
     </section>
 
-    <!-- PROCESS SECTION -->
+    <!-- PROCESS -->
     <section class="process" id="process">
-      <div class="container">
-        <div class="process__inner">
-          <h2 class="section-title">Mój Proces Mentoringu</h2>
+      <div class="process__container">
+        <div class="process__header" data-animate="fade-up">
+          <h2 class="section-heading">Mój Proces Mentoringu</h2>
+          <div class="section-separator"></div>
+        </div>
 
-          <div class="process__grid">
-            <!-- Row 1 -->
-            <div class="process-card">
-              <div class="process-card__connector"></div>
-              <div class="process-card__header">
-                <div class="process-card__icon">
-                  <svg
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"
-                      stroke="white"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
-                </div>
-                <span class="process-card__number">1</span>
-              </div>
-              <h3 class="process-card__title">Pierwszy Kontakt</h3>
-              <a
-                href="https://form.typeform.com/to/j2PdqNmU?typeform-source=iwona-kossmann.lovable.app"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="process-card__desc process-card__desc--link"
-              >
-                Wypełnij formularz kontaktowy
-              </a>
+        <div class="process__timeline">
+          <div class="process__line"></div>
+
+          <div class="process__step" data-animate="fade-up">
+            <div class="process__marker"><span>1</span></div>
+            <div class="process__card">
+              <h3 class="process__title">Pierwszy kontakt</h3>
+              <p class="process__desc">
+                <a
+                  href="https://forms.gle/CohtAwxWMPLHkk4v5"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="process__link"
+                  >Wypełnij formularz kontaktowy</a
+                >
+                — to zajmie tylko kilka minut.
+              </p>
             </div>
+          </div>
 
-            <div class="process-card">
-              <div class="process-card__connector"></div>
-              <div class="process-card__header">
-                <div class="process-card__icon">
-                  <svg
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <rect
-                      x="3"
-                      y="4"
-                      width="18"
-                      height="18"
-                      rx="2"
-                      ry="2"
-                      stroke="white"
-                      stroke-width="2"
-                    />
-                    <line
-                      x1="16"
-                      y1="2"
-                      x2="16"
-                      y2="6"
-                      stroke="white"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                    />
-                    <line
-                      x1="8"
-                      y1="2"
-                      x2="8"
-                      y2="6"
-                      stroke="white"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                    />
-                    <line
-                      x1="3"
-                      y1="10"
-                      x2="21"
-                      y2="10"
-                      stroke="white"
-                      stroke-width="2"
-                    />
-                  </svg>
-                </div>
-                <span class="process-card__number">2</span>
-              </div>
-              <h3 class="process-card__title">Rozmowa zapoznawcza</h3>
-              <p class="process-card__desc">Rozmowa na temat Twoich potrzeb.</p>
+          <div class="process__step" data-animate="fade-up">
+            <div class="process__marker"><span>2</span></div>
+            <div class="process__card">
+              <h3 class="process__title">Rozmowa zapoznawcza</h3>
+              <p class="process__desc">
+                Bezpłatna rozmowa na temat Twoich potrzeb i oczekiwań wobec
+                procesu mentoringowego.
+              </p>
             </div>
+          </div>
 
-            <div class="process-card">
-              <div class="process-card__header">
-                <div class="process-card__icon">
-                  <svg
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"
-                      stroke="white"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                    <circle
-                      cx="9"
-                      cy="7"
-                      r="4"
-                      stroke="white"
-                      stroke-width="2"
-                    />
-                    <path
-                      d="M23 21v-2a4 4 0 0 0-3-3.87"
-                      stroke="white"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                    <path
-                      d="M16 3.13a4 4 0 0 1 0 7.75"
-                      stroke="white"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
-                </div>
-                <span class="process-card__number">3</span>
-              </div>
-              <h3 class="process-card__title">Pierwsze spotkanie</h3>
-              <p class="process-card__desc">
+          <div class="process__step" data-animate="fade-up">
+            <div class="process__marker"><span>3</span></div>
+            <div class="process__card">
+              <h3 class="process__title">Pierwsze spotkanie</h3>
+              <p class="process__desc">
                 Określenie celów procesu mentoringowego oraz podpisanie
                 kontraktu.
               </p>
             </div>
+          </div>
 
-            <!-- Row 2 -->
-            <div class="process-card">
-              <div class="process-card__connector"></div>
-              <div class="process-card__header">
-                <div class="process-card__icon">
-                  <svg
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <polyline
-                      points="22 12 18 12 15 21 9 3 6 12 2 12"
-                      stroke="white"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
-                </div>
-                <span class="process-card__number">4</span>
-              </div>
-              <h3 class="process-card__title">Kolejne sesje mentoringowe</h3>
-              <p class="process-card__desc">
-                Przeprowadzenie kolejnych sesji skoncentrowanych na Twoich
-                potrzebach.
+          <div class="process__step" data-animate="fade-up">
+            <div class="process__marker"><span>4</span></div>
+            <div class="process__card">
+              <h3 class="process__title">Sesje mentoringowe</h3>
+              <p class="process__desc">
+                Regularne sesje skoncentrowane na Twoich celach i bieżących
+                wyzwaniach zawodowych.
               </p>
             </div>
+          </div>
 
-            <div class="process-card">
-              <div class="process-card__header">
-                <div class="process-card__icon">
-                  <svg
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <circle
-                      cx="12"
-                      cy="12"
-                      r="10"
-                      stroke="white"
-                      stroke-width="2"
-                    />
-                    <circle
-                      cx="12"
-                      cy="12"
-                      r="3"
-                      stroke="white"
-                      stroke-width="2"
-                    />
-                  </svg>
-                </div>
-                <span class="process-card__number">5</span>
-              </div>
-              <h3 class="process-card__title">Zakończenie procesu</h3>
-              <p class="process-card__desc">
-                Podsumowanie cyklu i określenie, czy cele zostały osiągnięte.
-                Optymalny cykl to 10 sesji, minimalny to 5 sesji.
+          <div class="process__step" data-animate="fade-up">
+            <div class="process__marker"><span>5</span></div>
+            <div class="process__card">
+              <h3 class="process__title">Zakończenie procesu</h3>
+              <p class="process__desc">
+                Podsumowanie cyklu i ocena osiągniętych celów. Optymalny cykl to
+                10 sesji, minimalny — 5.
               </p>
             </div>
           </div>
@@ -523,218 +440,346 @@
       </div>
     </section>
 
-    <!-- ACHIEVEMENTS SECTION -->
+    <!-- ACHIEVEMENTS -->
     <section class="achievements" id="achievements">
       <div class="achievements__vline"></div>
 
-      <div class="container">
-        <div class="achievements__inner">
-          <h2 class="section-title">Osiągnięcia zawodowe</h2>
+      <div class="achievements__container">
+        <div class="achievements__header" data-animate="fade-up">
+          <h2 class="section-heading">Osiągnięcia Zawodowe</h2>
+          <div class="section-separator"></div>
+        </div>
 
-          <!-- Key Achievements Card -->
-          <div class="achievements__card">
-            <div class="achievements__card-header">
-              <div class="achievements__icon">
-                <svg
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"
-                    stroke="#ec1313"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                  <polyline
-                    points="9 22 9 12 15 12 15 22"
-                    stroke="#ec1313"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </svg>
-              </div>
-              <h3 class="achievements__card-title">Kluczowe osiągnięcia</h3>
+        <div class="achievements__grid">
+          <div class="achievement" data-animate="fade-up">
+            <div class="achievement__icon">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <polygon
+                  points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                />
+              </svg>
             </div>
-
-            <ul class="achievements__list">
-              <li>
-                Założycielka i Prezeska firmy Kossmann Fashion - zrobienie
-                start-upu i stworzenie marki odzieżowej premium dla kobiet
-                aktywnych zawodowo, projektowanie i produkcja wykonywana w
-                Polsce; marka skierowana do świadomych konsumentek.
-              </li>
-              <li>
-                Prezeska Zarządu Deni Cler Group: stworzenie 16 kolekcji, ponad
-                5000 produktów, 2 sklepów internetowych, 16 sesji zdjęciowych
-                oraz wielu spektakularnych pokazów.
-              </li>
-              <li>
-                Prezeska Zarządu Revo Technologies - zrobienie start-upu
-                oferującego produkty i rozwiązania dla firm funkcjonujących w
-                obszarze handlu detalicznego. Stworzenie aplikacji dla klientów
-                umożliwiającej uzyskanie krótkoterminowego kredytu
-                konsumenckiego.
-              </li>
-              <li>
-                Prezeska Zarządu Marquard Media Polska, wydawcy magazynów:
-                Harper's Bazaar, Cosmopolitan, Playboy, Shape, Joy, Esquire,
-                Jamie Oliver.
-              </li>
-              <li>
-                Prezeska Zarządu Bonnier Business Polska, wydawcy i właściciela
-                Pulsu Biznesu, Pulsu Farmacji oraz firmy eventowej Informedia.
-                Przeprowadzenie rebrandingu gazety Puls Biznesu z wprowadzeniem
-                nowej szaty graficznej, weekendowego dodatku Puls Biznesu
-                Weekend oraz nowej strony internetowej.
-              </li>
-              <li>
-                Członkini Zarządu Orange odpowiedzialna za marketing i sprzedaż.
-                Osiągnięcia: czterokrotny wzrost przychodów z 2 do 8 mld zł w
-                wyniku rebrandingu marki Idea na Orange oraz zmiany
-                identyfikacji wizualnej w 1200 salonach. Po konsolidacji z TP
-                S.A. odpowiedzialność za RZiS rynku konsumenckiego o wartości 16
-                mld zł.
-              </li>
-              <li>
-                Dyrektorka ds. marketingu w Coty Polska - wprowadzenie na rynek
-                marek Lancaster, Davidoff, Joop, Chopard oraz rebranding marki
-                Adidas, Rimmel i Miss Sporty.
-              </li>
-              <li>
-                Marketing Menedżer w Coty Niemcy - przeprowadzenie procesu
-                rebranding marki kosmetyków kolorowych Chicogo na markę Rimmel,
-                wprowadzenie projektu na rynkach niemieckim, holenderskim,
-                hiszpańskim, brytyjskim i polskim.
-              </li>
-              <li>
-                Marketing Menedżer w Coty Węgry - otwarcie wraz z Dyrektorem
-                Generalnym start-upu Coty Węgry, wprowadzenie na rynek węgierski
-                portfolio marek jak Adidas, Margaret Astor, Rimmel, Miss Sporty
-                oraz Lancaster Group.
-              </li>
-            </ul>
+            <h3 class="achievement__title">Kossmann Fashion</h3>
+            <p class="achievement__role">Założycielka i Prezeska Zarządu</p>
+            <p class="achievement__desc">
+              Stworzenie marki odzieżowej premium dla kobiet aktywnych zawodowo.
+              Projektowanie i produkcja wykonywana w Polsce.
+            </p>
           </div>
 
-          <!-- Awards Card -->
-          <div class="achievements__card achievements__card--muted">
-            <div class="achievements__card-header">
-              <div class="achievements__icon">
-                <svg
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <circle
-                    cx="12"
-                    cy="8"
-                    r="7"
-                    stroke="#ec1313"
-                    stroke-width="2"
-                  />
-                  <polyline
-                    points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"
-                    stroke="#ec1313"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </svg>
-              </div>
-              <h3 class="achievements__card-title">Nagrody i wyróżnienia</h3>
+          <div class="achievement" data-animate="fade-up">
+            <div class="achievement__icon">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <rect x="2" y="7" width="20" height="14" rx="2" ry="2" />
+                <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
+              </svg>
             </div>
+            <h3 class="achievement__title">Deni Cler Group</h3>
+            <p class="achievement__role">Prezeska Zarządu</p>
+            <p class="achievement__desc">
+              16 kolekcji, ponad 5000 produktów, 2 sklepy internetowe, 16 sesji
+              zdjęciowych oraz spektakularne pokazy.
+            </p>
+          </div>
 
-            <div class="awards-list">
-              <div class="award-row">
-                <div class="award-row__info">
-                  <h4>Ranking Wpływowych Liderek Biznesu – Gazeta Finansowa</h4>
-                </div>
-                <span class="award-row__year"
-                  >2025, 2024, 2023, 2022, 2021</span
-                >
-              </div>
-              <div class="award-row">
-                <div class="award-row__info">
-                  <h4>Manager Roku – Home &amp; Market Magazine</h4>
-                </div>
-                <span class="award-row__year">2024, 2023, 2022, 2021</span>
-              </div>
-              <div class="award-row">
-                <div class="award-row__info">
-                  <h4>
-                    Nagroda za Osiągnięcia na Rzecz Rozwoju Polskiej Gospodarki
-                  </h4>
-                  <p class="award-row__sub">(Ministerstwo Gospodarki RP)</p>
-                </div>
-                <span class="award-row__year">2015</span>
-              </div>
-              <div class="award-row">
-                <div class="award-row__info">
-                  <h4>Polska Marka – Statuetka</h4>
-                </div>
-                <span class="award-row__year">2015</span>
-              </div>
-              <div class="award-row">
-                <div class="award-row__info">
-                  <h4>Prestiżowa Marka Modowa Roku</h4>
-                  <p class="award-row__sub">(Excellent Events)</p>
-                </div>
-                <span class="award-row__year">2014</span>
-              </div>
-              <div class="award-row">
-                <div class="award-row__info">
-                  <h4>Manager Dekady</h4>
-                  <p class="award-row__sub">(Mobile Marketing Magazine)</p>
-                </div>
-                <span class="award-row__year">2008</span>
-              </div>
-              <div class="award-row">
-                <div class="award-row__info">
-                  <h4>Marketer Roku</h4>
-                  <p class="award-row__sub">(Media i Marketing)</p>
-                </div>
-                <span class="award-row__year">2007, 2006</span>
-              </div>
+          <div class="achievement" data-animate="fade-up">
+            <div class="achievement__icon">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <circle cx="12" cy="12" r="10" />
+                <path d="M16 12a4 4 0 1 1-8 0 4 4 0 0 1 8 0z" />
+                <path d="M12 2v4" />
+                <path d="M12 18v4" />
+                <path d="M4.93 4.93l2.83 2.83" />
+                <path d="M16.24 16.24l2.83 2.83" />
+              </svg>
             </div>
+            <h3 class="achievement__title">Revo Technologies</h3>
+            <p class="achievement__role">Prezeska Zarządu</p>
+            <p class="achievement__desc">
+              Start-up oferujący produkty i rozwiązania dla firm w obszarze
+              handlu detalicznego; aplikacja umożliwiająca krótkoterminowy
+              kredyt konsumencki.
+            </p>
+          </div>
+
+          <div class="achievement" data-animate="fade-up">
+            <div class="achievement__icon">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
+                <path
+                  d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"
+                />
+              </svg>
+            </div>
+            <h3 class="achievement__title">Marquard Media Polska</h3>
+            <p class="achievement__role">Prezeska Zarządu</p>
+            <p class="achievement__desc">
+              Wydawca magazynów: Harper's Bazaar, Cosmopolitan, Playboy, Shape,
+              Joy, Esquire, Jamie Oliver.
+            </p>
+          </div>
+
+          <div class="achievement" data-animate="fade-up">
+            <div class="achievement__icon">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <circle cx="12" cy="12" r="10" />
+                <line x1="2" y1="12" x2="22" y2="12" />
+                <path
+                  d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"
+                />
+              </svg>
+            </div>
+            <h3 class="achievement__title">Bonnier Business Polska</h3>
+            <p class="achievement__role">Prezeska Zarządu</p>
+            <p class="achievement__desc">
+              Puls Biznesu, Puls Farmacji, Informedia. Przeprowadzenie
+              rebrandingu z nową szatą graficzną i stroną internetową.
+            </p>
+          </div>
+
+          <div class="achievement" data-animate="fade-up">
+            <div class="achievement__icon">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
+              </svg>
+            </div>
+            <h3 class="achievement__title">Orange</h3>
+            <p class="achievement__role">
+              Członkini Zarządu ds. marketingu i sprzedaży
+            </p>
+            <p class="achievement__desc">
+              Czterokrotny wzrost przychodów z 2 do 8 mld zł. Po konsolidacji z
+              TP S.A. — odpowiedzialność za rynek o wartości 16 mld zł.
+            </p>
+          </div>
+
+          <div class="achievement" data-animate="fade-up">
+            <div class="achievement__icon">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path
+                  d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"
+                />
+                <line x1="7" y1="7" x2="7.01" y2="7" />
+              </svg>
+            </div>
+            <h3 class="achievement__title">Coty Polska</h3>
+            <p class="achievement__role">Dyrektorka ds. marketingu</p>
+            <p class="achievement__desc">
+              Poprawa rentowności poprzez optymalizację portfolio produktów i
+              wydatków marketingowych.
+            </p>
+          </div>
+
+          <div class="achievement" data-animate="fade-up">
+            <div class="achievement__icon">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                <circle cx="12" cy="10" r="3" />
+              </svg>
+            </div>
+            <h3 class="achievement__title">Coty Niemcy</h3>
+            <p class="achievement__role">Menedżerka ds. marketingu</p>
+            <p class="achievement__desc">
+              Ponowne wprowadzenie na rynek marki kosmetyków kolorowych Chicogo
+              pod nazwą Rimmel z wykorzystaniem międzynarodowej platformy.
+            </p>
+          </div>
+
+          <div class="achievement" data-animate="fade-up">
+            <div class="achievement__icon">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                <circle cx="9" cy="7" r="4" />
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+              </svg>
+            </div>
+            <h3 class="achievement__title">Coty Węgry</h3>
+            <p class="achievement__role">Menedżerka ds. marketingu</p>
+            <p class="achievement__desc">
+              Wprowadzenie na rynek markę Coty wraz z markami kosmetyków
+              kolorowych: Margaret Astor, Rimmel, Miss Sporty
+            </p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- CTA SECTION -->
-    <section class="cta-section" id="contact">
-      <div class="cta-section__line cta-section__line--top"></div>
-      <div class="cta-section__line cta-section__line--bottom"></div>
+    <!-- AWARDS -->
+    <section class="awards">
+      <div class="awards__container">
+        <div class="awards__header" data-animate="fade-up">
+          <h2 class="section-heading">Nagrody i Wyróżnienia</h2>
+          <div class="section-separator"></div>
+        </div>
 
-      <div class="cta-section__inner">
-        <h2 class="cta-section__title">Zarezerwuj Sesję</h2>
-        <div class="cta-section__separator"></div>
-        <p class="cta-section__subtitle">
+        <div class="awards__list" data-animate="fade-up">
+          <div class="award">
+            <div class="award__info">
+              <h4 class="award__title">Ranking Wpływowych Liderek Biznesu</h4>
+              <p class="award__org">Gazeta Finansowa</p>
+            </div>
+            <span class="award__years">2025, 2024, 2023, 2022, 2021</span>
+          </div>
+          <div class="award">
+            <div class="award__info">
+              <h4 class="award__title">Manager Roku</h4>
+              <p class="award__org">Home &amp; Market Magazine</p>
+            </div>
+            <span class="award__years">2024, 2023, 2022, 2021</span>
+          </div>
+          <div class="award">
+            <div class="award__info">
+              <h4 class="award__title">
+                Medal Ministra Gospodarki RP za Osiągnięcia na rzecz rozwoju
+                polskiej gospodarki
+              </h4>
+              <p class="award__org">Ministerstwo Gospodarki RP</p>
+            </div>
+            <span class="award__years">2015</span>
+          </div>
+          <div class="award">
+            <div class="award__info">
+              <h4 class="award__title">
+                Statuetka od Ministra Gospodarki RP dla najlepszej polskiej mark
+              </h4>
+            </div>
+            <span class="award__years">2015</span>
+          </div>
+          <div class="award">
+            <div class="award__info">
+              <h4 class="award__title">Prestiżowa Marka Modowa Roku</h4>
+              <p class="award__org">Excellent Events</p>
+            </div>
+            <span class="award__years">2014</span>
+          </div>
+          <div class="award">
+            <div class="award__info">
+              <h4 class="award__title">Manager Dekady</h4>
+              <p class="award__org">Mobile Marketing Magazine</p>
+            </div>
+            <span class="award__years">2008</span>
+          </div>
+          <div class="award">
+            <div class="award__info">
+              <h4 class="award__title">Marketer Roku</h4>
+              <p class="award__org">Media i Marketing</p>
+            </div>
+            <span class="award__years">2006, 2007</span>
+          </div>
+        </div>
+
+        <div class="ornament ornament--section">
+          <span class="ornament__dash"></span>
+          <span class="ornament__dot"></span>
+          <span class="ornament__dash"></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta" id="contact">
+      <div class="cta__line cta__line--top"></div>
+      <div class="cta__line cta__line--bottom"></div>
+
+      <div class="cta__container" data-animate="fade-up">
+        <h2 class="cta__title">Zarezerwuj Sesję</h2>
+        <div class="cta__separator"></div>
+        <p class="cta__subtitle">
           Czy jesteś gotowa/gotowy na rozpoczęcie tej podróży ze mną?
         </p>
-        <p class="cta-section__desc">
+        <p class="cta__desc">
           Zarezerwuj rozmowę poznawczą już dziś i zrób pierwszy krok w kierunku
           osiągnięcia swoich celów.
         </p>
         <a
-          href="https://form.typeform.com/to/j2PdqNmU?typeform-source=iwona-kossmann.lovable.app"
+          href="https://forms.gle/CohtAwxWMPLHkk4v5"
           target="_blank"
           rel="noopener noreferrer"
-          class="cta-section__button"
+          class="btn btn--cta"
         >
-          <svg
-            width="16"
-            height="16"
-            viewBox="0 0 24 24"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
             <rect
               x="3"
               y="4"
@@ -773,13 +818,7 @@
             />
           </svg>
           <span>Wypełnij formularz</span>
-          <svg
-            width="16"
-            height="16"
-            viewBox="0 0 24 24"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
             <line
               x1="5"
               y1="12"
@@ -802,23 +841,17 @@
     </section>
 
     <!-- FOOTER -->
-    <footer class="footer" id="footer">
+    <footer class="footer">
       <div class="footer__top-line"></div>
 
-      <div class="footer__inner">
+      <div class="footer__container">
         <div class="footer__socials">
           <a
-            href="mailto:contact@mentor.com"
-            class="footer__social-icon"
+            href="mailto:kontakt@iwonakossmann.pl"
+            class="footer__icon"
             aria-label="Email"
           >
-            <svg
-              width="20"
-              height="20"
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
               <path
                 d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
                 stroke="#ec1313"
@@ -835,14 +868,14 @@
               />
             </svg>
           </a>
-          <a href="#" class="footer__social-icon" aria-label="LinkedIn">
-            <svg
-              width="20"
-              height="20"
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
+          <a
+            href="https://www.linkedin.com/in/iwonakossmann/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="footer__icon"
+            aria-label="LinkedIn"
+          >
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
               <path
                 d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"
                 stroke="#ec1313"
@@ -871,14 +904,14 @@
               />
             </svg>
           </a>
-          <a href="#" class="footer__social-icon" aria-label="Instagram">
-            <svg
-              width="20"
-              height="20"
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
+          <a
+            href="https://www.instagram.com/iwonakossmann/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="footer__icon"
+            aria-label="Instagram"
+          >
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
               <rect
                 x="2"
                 y="2"
@@ -905,49 +938,50 @@
               />
             </svg>
           </a>
-          <a href="#" class="footer__social-icon" aria-label="Twitter">
-            <svg
-              width="20"
-              height="20"
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"
-                stroke="#ec1313"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-            </svg>
-          </a>
         </div>
 
-        <div class="footer__ornament">
-          <span class="footer__ornament-dash"></span>
-          <span class="footer__ornament-dot"></span>
-          <span class="footer__ornament-dash"></span>
+        <div class="ornament">
+          <span class="ornament__dash"></span>
+          <span class="ornament__dot"></span>
+          <span class="ornament__dash"></span>
         </div>
 
         <div class="footer__contact">
-          <p class="footer__email">contact@mentor.com</p>
+          <a href="mailto:kontakt@iwonakossmann.pl" class="footer__email"
+            >kontakt@iwonakossmann.pl</a
+          >
           <p class="footer__availability">
             Dostępna dla konsultacji na całym świecie
           </p>
         </div>
 
-        <p class="footer__copyright">
-          © 2026 Professional Mentor. Wszelkie prawa zastrzeżone.
+        <p class="footer__copy">
+          &copy; 2026 Iwona Kossmann. Wszelkie prawa zastrzeżone.
         </p>
 
-        <div class="footer__ornament">
-          <span class="footer__ornament-dash"></span>
-          <span class="footer__ornament-dot"></span>
-          <span class="footer__ornament-dash"></span>
+        <div class="ornament">
+          <span class="ornament__dash"></span>
+          <span class="ornament__dot"></span>
+          <span class="ornament__dash"></span>
         </div>
 
-        <div class="footer__gdpr">
+        <button class="footer__gdpr-toggle" aria-expanded="false">
+          Klauzula informacyjna RODO
+          <svg
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <polyline points="6 9 12 15 18 9" />
+          </svg>
+        </button>
+
+        <div class="footer__gdpr" id="gdpr" hidden>
           <h4 class="footer__gdpr-title">
             Klauzula informacyjna dotycząca przetwarzania danych osobowych
             uczestników mentoringu
@@ -977,8 +1011,7 @@
               Dane osobowe są przetwarzane wyłącznie w celu kontaktu z osobami
               zainteresowanymi udziałem w procesie mentoringowym, umówienia
               spotkania zapoznawczego w formule online oraz ewentualnego
-              zawarcia i realizacji umowy mentoringowej (kontraktu
-              mentoringowego).
+              zawarcia i realizacji umowy mentoringowej.
             </li>
             <li>
               Dane nie są wykorzystywane do celów marketingowych ani do
@@ -986,19 +1019,18 @@
             </li>
             <li>
               Podstawą przetwarzania danych jest zgoda osoby, której dane
-              dotyczą, a w przypadku zawarcia umowy mentoringowej – niezbędność
+              dotyczą, a w przypadku zawarcia umowy mentoringowej — niezbędność
               przetwarzania do jej wykonania.
             </li>
             <li>
               Proces zbierania danych realizowany jest przy użyciu narzędzia
-              Typeform (typeform.com). Informacje dotyczące sposobu
-              przetwarzania i zabezpieczania danych w ramach tego narzędzia są
-              dostępne w polityce Typeform pod adresem:
+              Google Forms (google.com). Informacje dotyczące sposobu
+              przetwarzania i zabezpieczania danych są dostępne pod adresem:
               <a
-                href="https://help.typeform.com/hc/en-us/articles/360029581691-What-happens-to-my-data"
+                href="https://policies.google.com/privacy?hl=en-gb"
                 target="_blank"
                 rel="noopener"
-                >https://help.typeform.com/hc/en-us/articles/360029581691-What-happens-to-my-data</a
+                >policies.google.com</a
               >.
             </li>
             <li>
@@ -1009,7 +1041,7 @@
             </li>
             <li>
               Dane będą przetwarzane przez czas trwania kontaktu, a w przypadku
-              zawarcia umowy – przez okres jej realizacji oraz po jej
+              zawarcia umowy — przez okres jej realizacji oraz po jej
               zakończeniu w zakresie niezbędnym do zabezpieczenia ewentualnych
               roszczeń.
             </li>
@@ -1017,17 +1049,15 @@
               Osobie, której dane dotyczą, przysługuje prawo dostępu do danych,
               ich poprawiania, usunięcia, ograniczenia przetwarzania,
               przenoszenia danych, wniesienia sprzeciwu wobec przetwarzania oraz
-              cofnięcia zgody w dowolnym momencie. Cofnięcie zgody nie wpływa na
-              zgodność z prawem przetwarzania dokonanego przed jej cofnięciem.
+              cofnięcia zgody w dowolnym momencie.
             </li>
             <li>
               Osobie tej przysługuje również prawo wniesienia skargi do Prezesa
-              Urzędu Ochrony Danych Osobowych (więcej:
-              <a
+              Urzędu Ochrony Danych Osobowych (<a
                 href="https://uodo.gov.pl/pl/p/dla-obywatela"
                 target="_blank"
                 rel="noopener"
-                >https://uodo.gov.pl/pl/p/dla-obywatela</a
+                >uodo.gov.pl</a
               >).
             </li>
             <li>
@@ -1039,8 +1069,6 @@
       </div>
     </footer>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>
