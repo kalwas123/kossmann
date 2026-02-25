@@ -10,11 +10,56 @@
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- Load fonts without blocking render (saves ~240ms) -->
     <link
+      rel="preload"
       href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&display=swap"
-      rel="stylesheet"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
     />
-    <link rel="stylesheet" href="css/style.css" />
+    <noscript>
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&display=swap"
+      />
+    </noscript>
+    <!-- Critical CSS for first paint; full stylesheet loads async -->
+    <style>
+      :root {
+        --crimson: #ec1313;
+        --crimson-bg: rgba(236, 19, 19, 0.1);
+        --crimson-border: rgba(236, 19, 19, 0.25);
+        --crimson-faint: rgba(236, 19, 19, 0.15);
+        --black: #000000;
+        --white: #ffffff;
+        --gray: #737373;
+        --sand: #f5f5f5;
+        --text: rgba(0, 0, 0, 0.9);
+        --text-muted: rgba(0, 0, 0, 0.55);
+        --border: #e6e6e6;
+        --border-light: rgba(0, 0, 0, 0.06);
+        --font-heading: "Bebas Neue", sans-serif;
+        --font-body: "Inter", sans-serif;
+        --max-w: 1200px;
+        --gutter: 24px;
+        --radius: 8px;
+        --ease: cubic-bezier(0.4, 0, 0.2, 1);
+      }
+      *,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+      html{scroll-behavior:smooth;}
+      body{font-family:var(--font-body);color:var(--text);background:var(--white);line-height:1.6;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;}
+      img{display:block;max-width:100%;height:auto;}
+      a{text-decoration:none;color:inherit;}
+      button{font:inherit;cursor:pointer;border:none;background:none;}
+      ul,ol{list-style:none;}
+    </style>
+    <link
+      rel="preload"
+      href="css/style.css"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <noscript><link rel="stylesheet" href="css/style.css" /></noscript>
   </head>
   <body>
     <!-- NAVBAR -->
