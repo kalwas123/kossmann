@@ -63,7 +63,19 @@ document.addEventListener("DOMContentLoaded", () => {
     "(prefers-reduced-motion: reduce)",
   ).matches;
 
+  const animatedEls = document.querySelectorAll("[data-animate]");
+
   if (!prefersReduced) {
+    const viewportH = window.innerHeight;
+
+    animatedEls.forEach((el) => {
+      const rect = el.getBoundingClientRect();
+      const inViewport = rect.top < viewportH * 0.9;
+      if (inViewport) {
+        el.classList.add("is-visible");
+      }
+    });
+
     const animateObserver = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -73,16 +85,14 @@ document.addEventListener("DOMContentLoaded", () => {
           }
         });
       },
-      { rootMargin: "0px 0px -80px 0px", threshold: 0.1 },
+      { rootMargin: "0px 0px -80px 0px", threshold: 0.2 },
     );
 
-    document
-      .querySelectorAll("[data-animate]")
-      .forEach((el) => animateObserver.observe(el));
+    animatedEls.forEach((el) => {
+      if (!el.classList.contains("is-visible")) animateObserver.observe(el);
+    });
   } else {
-    document
-      .querySelectorAll("[data-animate]")
-      .forEach((el) => el.classList.add("is-visible"));
+    animatedEls.forEach((el) => el.classList.add("is-visible"));
   }
 
   /* ─── Counter animation ─── */

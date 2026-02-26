@@ -460,7 +460,7 @@ ol {
 
 @media (max-width: 768px) {
   .hero__photo {
-    height: 40vh;
+    /* height: 40vh; */
   }
 }
 
