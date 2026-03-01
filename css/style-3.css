@@ -334,6 +334,42 @@ ol {
   transform: translateY(-7px) rotate(-45deg);
 }
 
+.nav__right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.nav__socials {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.nav__social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  color: var(--gray);
+  border-radius: 6px;
+  transition: color 0.2s ease, background 0.2s ease;
+}
+
+.nav__social:hover {
+  color: var(--crimson);
+  background: var(--crimson-faint);
+}
+
+.nav--scrolled .nav__social {
+  color: var(--gray);
+}
+
+.nav--scrolled .nav__social:hover {
+  color: var(--crimson);
+}
+
 /* ═══════════════════════════════════
    HERO (V2 layout + V1 style)
    ═══════════════════════════════════ */
@@ -1327,7 +1363,7 @@ ol {
     display: flex;
   }
 
-  .nav__menu {
+  .nav__right {
     position: absolute;
     top: 64px;
     left: 0;
@@ -1338,17 +1374,26 @@ ol {
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     border-bottom: 1px solid var(--border-light);
-    padding: 8px 16px 16px;
+    padding: 8px 16px 20px;
     transform: translateY(-10px);
     opacity: 0;
     pointer-events: none;
     transition: transform 0.3s ease, opacity 0.3s ease;
   }
 
-  .nav__menu--open {
+  .nav__right--open {
     transform: translateY(0);
     opacity: 1;
     pointer-events: auto;
+  }
+
+  .nav__menu {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .nav__menu--open {
+    /* kept for JS compatibility */
   }
 
   .nav__link {
@@ -1359,6 +1404,19 @@ ol {
 
   .nav__link--cta {
     margin-top: 8px;
+  }
+
+  .nav__socials {
+    margin-top: 12px;
+    padding-top: 12px;
+    border-top: 1px solid var(--border-light);
+    justify-content: center;
+    gap: 8px;
+  }
+
+  .nav__social {
+    width: 40px;
+    height: 40px;
   }
 
   /* Hero */

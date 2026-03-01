@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
   const nav = document.getElementById("nav");
   const toggle = document.querySelector(".nav__toggle");
+  const navRight = document.querySelector(".nav__right");
   const menu = document.querySelector(".nav__menu");
   const navLinks = document.querySelectorAll(".nav__link");
   const sections = document.querySelectorAll("section[id]");
@@ -14,6 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const top =
         target.getBoundingClientRect().top + window.scrollY - nav.offsetHeight;
       window.scrollTo({ top, behavior: "smooth" });
+      if (navRight) navRight.classList.remove("nav__right--open");
       menu.classList.remove("nav__menu--open");
       toggle.classList.remove("nav__toggle--open");
       toggle.setAttribute("aria-expanded", "false");
@@ -23,7 +25,8 @@ document.addEventListener("DOMContentLoaded", () => {
   /* ─── Mobile toggle ─── */
   toggle.addEventListener("click", () => {
     const isOpen = menu.classList.toggle("nav__menu--open");
-    toggle.classList.toggle("nav__toggle--open");
+    if (navRight) navRight.classList.toggle("nav__right--open", isOpen);
+    toggle.classList.toggle("nav__toggle--open", isOpen);
     toggle.setAttribute("aria-expanded", isOpen);
   });
 
