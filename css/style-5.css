@@ -437,10 +437,10 @@ ol {
 }
 
 .hero__subtitle {
-  font-weight: 400;
+  font-weight: 600;
   font-size: clamp(16px, 1.5vw, 24px);
   line-height: 1.4;
-  color: var(--gray);
+  color: var(--black);
   max-width: 576px;
 }
 
