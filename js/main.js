@@ -134,6 +134,18 @@ document.addEventListener("DOMContentLoaded", () => {
     counters.forEach((c) => (c.textContent = c.dataset.count));
   }
 
+  /* ─── Testimonials: show more ─── */
+  const testimonialsGrid = document.querySelector(".testimonials__grid");
+  const testimonialsBtn = document.querySelector(".testimonials__show-more");
+
+  if (testimonialsGrid && testimonialsBtn) {
+    testimonialsBtn.addEventListener("click", () => {
+      const isExpanded = testimonialsGrid.classList.toggle("is-expanded");
+      testimonialsBtn.setAttribute("aria-expanded", isExpanded);
+      testimonialsBtn.textContent = isExpanded ? "Pokaż mniej" : "Pokaż więcej opinii";
+    });
+  }
+
   /* ─── GDPR toggle ─── */
   const gdprToggle = document.querySelector(".footer__gdpr-toggle");
   const gdprSection = document.getElementById("gdpr");

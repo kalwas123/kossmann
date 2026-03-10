@@ -143,6 +143,7 @@ ol {
   border-radius: 6px;
   cursor: pointer;
   transition: background 0.3s ease, transform 0.2s ease;
+  text-align: center;
 }
 
 .btn--primary {
@@ -783,6 +784,29 @@ ol {
   gap: 32px;
   max-width: 1152px;
   margin: 0 auto;
+}
+
+.testimonials__grid .testimonial:nth-child(n + 4) {
+  display: none;
+}
+
+.testimonials__grid.is-expanded .testimonial:nth-child(n + 4) {
+  display: flex;
+}
+
+.testimonials__actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 48px;
+}
+
+.testimonials__show-more {
+  min-width: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
 }
 
 .testimonial {
