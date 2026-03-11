@@ -134,7 +134,48 @@ document.addEventListener("DOMContentLoaded", () => {
     counters.forEach((c) => (c.textContent = c.dataset.count));
   }
 
-  /* ─── Testimonials: show more ─── */
+  /* ─── Testimonials: truncate long text (500 chars) + "Pokaż więcej" ─── */
+  const MAX_TESTIMONIAL_CHARS = 700;
+  document.querySelectorAll(".testimonial").forEach((article) => {
+    const content = article.querySelector(".testimonial__content");
+    if (!content) return;
+    const paragraphs = content.querySelectorAll("p");
+    if (!paragraphs.length) return;
+    const fullText = Array.from(paragraphs)
+      .map((p) => p.textContent.trim())
+      .filter(Boolean)
+      .join(" ");
+    if (fullText.length <= MAX_TESTIMONIAL_CHARS) return;
+
+    const excerpt = fullText.slice(0, MAX_TESTIMONIAL_CHARS);
+    const rest = fullText.slice(MAX_TESTIMONIAL_CHARS);
+    const body = document.createElement("div");
+    body.className = "testimonial__body";
+    const excerptSpan = document.createElement("span");
+    excerptSpan.className = "testimonial__excerpt";
+    excerptSpan.textContent = excerpt;
+    const dotsSpan = document.createElement("span");
+    dotsSpan.className = "testimonial__dots";
+    dotsSpan.textContent = "...";
+    const restSpan = document.createElement("span");
+    restSpan.className = "testimonial__rest";
+    restSpan.textContent = rest;
+    const btn = document.createElement("button");
+    btn.type = "button";
+    btn.className = "testimonial__read-more";
+    btn.textContent = "Pokaż więcej";
+    btn.setAttribute("aria-expanded", "false");
+    btn.addEventListener("click", () => {
+      const expanded = body.classList.toggle("is-expanded");
+      btn.setAttribute("aria-expanded", expanded);
+      btn.textContent = expanded ? "Pokaż mniej" : "Pokaż więcej";
+    });
+    body.append(excerptSpan, dotsSpan, restSpan, btn);
+    paragraphs.forEach((p) => p.remove());
+    content.insertBefore(body, content.firstElementChild.nextSibling);
+  });
+
+  /* ─── Testimonials: show more cards ─── */
   const testimonialsGrid = document.querySelector(".testimonials__grid");
   const testimonialsBtn = document.querySelector(".testimonials__show-more");
 
@@ -142,7 +183,9 @@ document.addEventListener("DOMContentLoaded", () => {
     testimonialsBtn.addEventListener("click", () => {
       const isExpanded = testimonialsGrid.classList.toggle("is-expanded");
       testimonialsBtn.setAttribute("aria-expanded", isExpanded);
-      testimonialsBtn.textContent = isExpanded ? "Pokaż mniej" : "Pokaż więcej opinii";
+      testimonialsBtn.textContent = isExpanded
+        ? "Pokaż mniej"
+        : "Pokaż więcej opinii";
     });
   }
 
